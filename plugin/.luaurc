@@ -1,7 +1,6 @@
 {
 	"languageMode": "strict",
 	"aliases": {
-		"src": "src",
 		"pkgs": "roblox_packages"
 	}
 }
