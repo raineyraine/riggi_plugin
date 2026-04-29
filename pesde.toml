@@ -1,0 +1,12 @@
+name = "raineyraine/riggi_root"
+version = "0.1.0"
+authors = ["raineyraine"]
+license = "MIT"
+
+workspace_members = ["pkgs/*", "plugin"]
+
+[target]
+environment = "lune"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"

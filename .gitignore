@@ -1,0 +1,10 @@
+# package
+luau_packages/
+roblox_packages/
+lune_packages/
+.pesde/
+
+# build
+sourcemap.json
+*.rbxm*
+*.rbxl*

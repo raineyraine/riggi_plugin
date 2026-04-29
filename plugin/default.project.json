@@ -1,0 +1,12 @@
+{
+	"name": "riggi_plugin",
+	"tree": {
+		"$className": "Folder",
+		"plugin": {
+			"$path": "src"
+		},
+		"roblox_packages": {
+			"$path": "roblox_packages"
+		}
+	}
+}
