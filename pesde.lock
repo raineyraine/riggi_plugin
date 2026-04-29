@@ -6,7 +6,7 @@ version = "0.1.0"
 target = "lune"
 
 [workspace."raineyraine/riggi_perdere_loader"]
-luau = "pkgs/perdere_loader"
+roblox = "pkgs/perdere_loader"
 
 [workspace."raineyraine/riggi_plugin"]
 roblox = "plugin"

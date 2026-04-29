@@ -135,3 +135,10 @@ option = [{ name = "lukadev_0/option", version = "^1.2.1", index = "https://gith
 pathfs = [{ name = "jiwonz/pathfs", version = "^0.6.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 result = [{ name = "lukadev_0/result", version = "^1.2.1", index = "https://github.com/pesde-pkg/index" }, "peer"]
 unzip = [{ name = "0x5eal/unzip", version = "^0.2.0", index = "https://github.com/pesde-pkg/index", target = "luau" }, "standard"]
+
+[graph."raineyraine/riggi_perdere_loader@0.1.0 roblox"]
+direct = ["riggi_perdere_loader", { workspace = "raineyraine/riggi_perdere_loader", version = "^" }, "standard"]
+
+[graph."raineyraine/riggi_perdere_loader@0.1.0 roblox".pkg_ref]
+ref_ty = "workspace"
+path = "pkgs/perdere_loader"

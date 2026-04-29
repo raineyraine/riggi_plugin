@@ -23,6 +23,7 @@ lune = "^0.10.2"
 
 [dependencies]
 vide = { name = "centau/vide", version = "^0.4.0" }
+riggi_perdere_loader = { workspace = "raineyraine/riggi_perdere_loader", version = "^" }
 
 [patches]
 "centau/vide" = { "0.4.0 roblox" = "patches/centau+vide-0.4.0+roblox.patch" }

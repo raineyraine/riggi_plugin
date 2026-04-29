@@ -3,4 +3,4 @@
 format = 2
 name = "raineyraine/riggi_perdere_loader"
 version = "0.1.0"
-target = "luau"
+target = "roblox"
