@@ -3,6 +3,7 @@ luau_packages/
 roblox_packages/
 lune_packages/
 .pesde/
+dist/
 
 # build
 sourcemap.json
