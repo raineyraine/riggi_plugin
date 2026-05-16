@@ -44,7 +44,6 @@ function lib.load_to_rig(character: Model, data: PresetData)
 		pants = Instance.new("Pants")
 		pants.Parent = character
 	end
-	pants.PantsTemplate = ""
 
 	local head = character:FindFirstChild("Head")
 	assert(head and head:IsA("BasePart"), `no head found for {character}`)
@@ -55,10 +54,10 @@ function lib.load_to_rig(character: Model, data: PresetData)
 		shirt.ShirtTemplate = data.Shirt
 	end
 	if string.len(data.Pants) >= 0 then
-		shirt.ShirtTemplate = data.Pants
+		pants.PantsTemplate = data.Pants
 	end
 	if string.len(data.Face) >= 0 then
-		face.Texture = data.Pants
+		face.Texture = data.Face
 	end
 
 	for _, child in pairs(character:GetChildren()) do
@@ -79,8 +78,7 @@ function lib.load_to_rig(character: Model, data: PresetData)
 		handle.Reflectance = accessory.HandleReflectance or 0
 		-- upstream_change type errors
 		-- handle.Material = Enum.Material[accessory.HandleMaterial or "Plastic"]
-		handle.Material = Enum.Material:FromName(accessory.HandleMaterial or "SmoothPlastic")
-			or Enum.Material.SmoothPlastic
+		handle.Material = Enum.Material:FromName(accessory.HandleMaterial or "Plastic") or Enum.Material.Plastic
 		handle.Anchored = false
 		handle.CanCollide = false
 		handle.Parent = new_accessory
