@@ -1,0 +1,31 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+
+    pull_request:
+        branches:
+            - main
+jobs:
+    analyze:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Setup rokit
+              uses: CompeyDev/setup-rokit@v0.2.1
+
+            - name: Install dependencies
+              run: |
+                  pesde install
+
+            - name: Setup lune
+              run: |
+                  lune setup
+
+            - name: Build
+              run: |
+                  lune run build

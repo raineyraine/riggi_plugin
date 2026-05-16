@@ -1,0 +1,33 @@
+name: Release
+
+on:
+    release:
+        types: published
+
+jobs:
+    analyze:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Setup rokit
+              uses: CompeyDev/setup-rokit@v0.2.1
+
+            - name: Install dependencies
+              run: |
+                  pesde install
+
+            - name: Setup lune
+              run: |
+                  lune setup
+
+            - name: Build
+              run: |
+                  lune run build
+
+            - name: Upload assets
+              uses: softprops/action-gh-release@v3
+              with:
+                  working_directory: plugin
+                  files: plugin.rbxm
