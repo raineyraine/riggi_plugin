@@ -22,8 +22,8 @@ pesde = "^0.7.0"
 lune = "^0.10.2"
 
 [dependencies]
-vide = { name = "centau/vide", version = "^0.4.0" }
+vide = { repo = "centau/vide", rev = "19eaeb4" }
 riggi_perdere_loader = { workspace = "raineyraine/riggi_perdere_loader", version = "^" }
 
 [patches]
-"centau/vide" = { "0.4.0 roblox" = "patches/centau+vide-0.4.0+roblox.patch" }
+"centau/vide" = { "0.0.0-242a44838807170ca4a4905a277139dd8cee37d1 roblox" = "patches/centau+vide-0.0.0-242a44838807170ca4a4905a277139dd8cee37d1+roblox.patch" }
