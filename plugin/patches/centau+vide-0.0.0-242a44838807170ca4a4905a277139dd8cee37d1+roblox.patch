@@ -1,5 +1,5 @@
 diff --git a/src/create.luau b/src/create.luau
-index db33663..35257ad 100644
+index db33663..1ab4a95 100644
 --- a/src/create.luau
 +++ b/src/create.luau
 @@ -52,7 +52,7 @@ local function create(class_or_instance: string|Instance, properties: { [unknown
@@ -11,7 +11,20 @@ index db33663..35257ad 100644
      Folder: Folder,
      BillboardGui: BillboardGui,
      CanvasGroup: CanvasGroup,
-@@ -74,7 +74,7 @@ type Instances = {
+@@ -67,6 +67,12 @@ type Instances = {
+     TextLabel: TextLabel,
+     UIAspectRatioConstraint: UIAspectRatioConstraint,
+     UICorner: UICorner,
++    UIPadding: UIPadding,
++    UIDragDetector: UIDragDetector,
++    UIFlexItem: UIFlexItem,
++    UIScale: UIScale,
++    UIShadow: UIShadow,
++    UIStroke: UIStroke,
+     UIGradient: UIGradient,
+     UIGridLayout: UIGridLayout,
+     UIListLayout: UIListLayout,
+@@ -74,7 +80,7 @@ type Instances = {
      WorldModel: WorldModel,
  }
  
