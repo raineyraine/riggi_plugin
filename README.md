@@ -5,7 +5,7 @@ Roblox plugin for inserting characters. Currently only works with Perdere charac
 ## Installation
 
 ### Github Releases
-You can install the latest `.rbxm` of the plugin [here](github.com/raineyraine/riggi_plugin/releases/latest). Then, you will have to add it as a local plugin in studio. Use `Plugins > Plugins Folder` to find that folder:
+You can install the latest `.rbxm` of the plugin [here](https://github.com/raineyraine/riggi_plugin/releases/latest). Then, you will have to add it as a local plugin in studio. Use `Plugins > Plugins Folder` to find that folder:
 
 ![alt text](assets/studio-plugin-folder.png)
 
