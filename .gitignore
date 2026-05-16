@@ -7,5 +7,5 @@ dist/
 
 # build
 sourcemap.json
-*.rbxm*
-*.rbxl*
+plugin.rbxm*
+build.rbxl*
