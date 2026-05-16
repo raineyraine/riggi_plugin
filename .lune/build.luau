@@ -1,0 +1,26 @@
+--!strict
+
+local process = require "@lune/process"
+
+local pathfs = require "@pkgs/pathfs"
+
+local build_plugin = require "./lib/build_plugin"
+
+local do_install = table.find(process.args, "-i") or table.find(process.args, "--install")
+local do_watch = table.find(process.args, "-w") or table.find(process.args, "--watch")
+
+if not do_watch then
+	build_plugin.build()
+
+	if do_install then
+		build_plugin.install()
+	end
+else
+	print("now watching")
+	pathfs.watchDirectories({ "plugin/src" }, function()
+		build_plugin.build()
+		if do_install then
+			build_plugin.install()
+		end
+	end)
+end
