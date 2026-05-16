@@ -11,6 +11,9 @@ roblox = "pkgs/perdere_loader"
 [workspace."raineyraine/riggi_plugin"]
 roblox = "plugin"
 
+[workspace."raineyraine/riggi_rig_cleaner"]
+roblox = "pkgs/rig_cleaner"
+
 [graph."jiwonz/greentea_luau@0.2.0 luau".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"

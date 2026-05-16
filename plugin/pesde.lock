@@ -144,3 +144,10 @@ direct = ["riggi_perdere_loader", { workspace = "raineyraine/riggi_perdere_loade
 [graph."raineyraine/riggi_perdere_loader@0.1.0 roblox".pkg_ref]
 ref_ty = "workspace"
 path = "pkgs/perdere_loader"
+
+[graph."raineyraine/riggi_rig_cleaner@0.1.0 roblox"]
+direct = ["riggi_rig_cleaner", { workspace = "raineyraine/riggi_rig_cleaner", version = "^" }, "standard"]
+
+[graph."raineyraine/riggi_rig_cleaner@0.1.0 roblox".pkg_ref]
+ref_ty = "workspace"
+path = "pkgs/rig_cleaner"

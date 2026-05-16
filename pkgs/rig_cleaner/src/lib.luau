@@ -21,6 +21,7 @@ local function clean_rig(rig: Model, material_to_use: Enum.Material?)
 			mp.Transparency = handle.Transparency
 			mp.TextureID = mesh.TextureId
 			mp.Name = v.Name
+			mp.Anchored = true
 			mp.Parent = weld.Part1
 			mp.Size = mp.Size * Size
 			local attachment = handle:FindFirstChildOfClass("Attachment")
@@ -39,6 +40,16 @@ local function clean_rig(rig: Model, material_to_use: Enum.Material?)
 			) + Offset
 
 			v.Parent = nil
+		end
+	end
+
+	for _, v in rig:GetChildren() do
+		if v:IsA("BasePart") then
+			for _, basepart_child in v:GetChildren() do
+				if basepart_child:IsA("Attachment") or basepart_child:IsA("Motor6D") then
+					basepart_child:Destroy()
+				end
+			end
 		end
 	end
 

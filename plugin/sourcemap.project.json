@@ -5,6 +5,9 @@
 		"plugin": {
 			"$path": "src"
 		},
+		"assets": {
+			"$path": "assets"
+		},
 		"roblox_packages": {
 			"$path": "roblox_packages"
 		}

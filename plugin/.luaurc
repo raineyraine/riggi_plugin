@@ -1,6 +1,7 @@
 {
 	"languageMode": "strict",
 	"aliases": {
-		"pkgs": "roblox_packages"
+		"pkgs": "roblox_packages",
+		"plugin": "./"
 	}
 }
