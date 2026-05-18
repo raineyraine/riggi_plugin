@@ -3,10 +3,10 @@
 	"tree": {
 		"$className": "Folder",
 		"plugin": {
-			"$path": "src"
+			"$path": "dist"
 		},
 		"assets": {
-			"$path": "assets"
+			"$path": "./assets/plugin"
 		},
 		"roblox_packages": {
 			"$path": "roblox_packages"

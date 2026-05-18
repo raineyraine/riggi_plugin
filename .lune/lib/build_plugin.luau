@@ -3,9 +3,9 @@
 local fs = require "@lune/fs"
 local process = require "@lune/process"
 local roblox = require "@lune/roblox"
+local stdio = require "@lune/stdio"
 
-local PLUGIN_PATH = "plugin"
-local DIST = PLUGIN_PATH .. "/dist"
+local DIST = "dist"
 
 local build_plugin = {}
 
@@ -14,31 +14,31 @@ function build(): string
 		fs.removeDir(DIST)
 	end
 
+	stdio.write(stdio.color("green") .. "installing dependencies" .. stdio.color("reset") .. "\n")
 	process.exec("pesde", { "install" }, {
 		shell = true,
 		stdio = "inherit",
-		cwd = PLUGIN_PATH,
 	})
 
+	stdio.write(stdio.color("green") .. "generating sourcemap" .. stdio.color("reset") .. "\n")
 	process.exec("rojo", { "sourcemap", "sourcemap.project.json", "-o", "sourcemap.json" }, {
 		shell = true,
 		stdio = "inherit",
-		cwd = PLUGIN_PATH,
 	})
 
+	stdio.write(stdio.color("green") .. "running darklua" .. stdio.color("reset") .. "\n")
 	process.exec("darklua", { "process", "src", "dist" }, {
 		shell = true,
 		stdio = "inherit",
-		cwd = PLUGIN_PATH,
 	})
 
+	stdio.write(stdio.color("green") .. "building" .. stdio.color("reset") .. "\n")
 	process.exec("rojo", { "build", "build.project.json", "-o", "plugin.rbxm" }, {
 		shell = true,
 		stdio = "inherit",
-		cwd = PLUGIN_PATH,
 	})
 
-	return PLUGIN_PATH .. "/plugin.rbxm"
+	return "plugin.rbxm"
 end
 build_plugin.build = build
 

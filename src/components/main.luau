@@ -7,14 +7,14 @@ local Workspace = game:GetService("Workspace")
 
 local vide = require "@pkgs/vide"
 
-local perdere_loader = require "@pkgs/riggi_perdere_loader"
-local rig_cleaner = require "@pkgs/riggi_rig_cleaner"
+local perdere_loader = require "@plugin/libs/perdere_loader"
+local rig_cleaner = require "@plugin/libs/rig_cleaner"
 
 local background = require "./core/background"
 local button = require "./core/button"
 local padding = require "./core/padding"
 
-local assets = require "@plugin/assets"
+local assets = require "@assets"
 
 local FOLDER_NAME = "riggi_plugin_loaded"
 

@@ -1,7 +1,0 @@
-{
-	"languageMode": "strict",
-	"aliases": {
-		"pkgs": "roblox_packages",
-		"plugin": "./"
-	}
-}
