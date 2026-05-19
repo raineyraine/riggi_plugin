@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center"><b>Charm</b></h1>
+  <h1 align="center"><b>Riggi</b></h1>
   <p align="center">
     Roblox plugin for inserting characters. Currently only works with Perdere character saves.
     <br />
