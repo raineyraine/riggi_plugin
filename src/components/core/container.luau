@@ -1,16 +1,20 @@
 --!strict
+-- from https://github.com/alicesaidhi/videkit_ty/blob/main/src/components/container.luau
 
 local vide = require "@pkgs/vide"
 local create = vide.create
 
-export type ContainerProps = vide.Properties<Frame>
-
-return function(props: ContainerProps)
+local function container(props: vide.Properties<Frame>)
 	return create "Frame" {
+
+		Name = "Container",
+
 		Size = UDim2.fromScale(1, 1),
+
 		BackgroundTransparency = 1,
-		BorderSizePixel = 0,
 
 		props,
 	}
 end
+
+return container
