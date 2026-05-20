@@ -1,11 +1,11 @@
 {
-	"languageMode": "strict",
-	"aliases": {
-		"lune": "~/.lune/.typedefs/0.10.4/",
-		"pkgs": "roblox_packages",
-		"luau_pkgs": "luau_packages",
-		"lune_pkgs": "lune_packages",
-		"assets": "./assets/plugin",
-		"plugin": "src"
-	}
+  "languageMode": "strict",
+  "aliases": {
+    "lune": "~/.lune/.typedefs/0.10.4/",
+    "pkgs": "roblox_packages",
+    "luau_pkgs": "luau_packages",
+    "lune_pkgs": "lune_packages",
+    "assets": "./assets/plugin",
+    "plugin": "src"
+  }
 }
