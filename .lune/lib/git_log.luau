@@ -16,34 +16,35 @@ export type GitLogParsed = {
 	hash: string,
 	short_hash: string,
 	subject: string,
-	body: string,
 }
 
 local function get_logs_from(tag: string): Result<{ GitLogParsed }>
-	local result = process.exec(GIT, { "log", `{tag}..HEAD`, "--pretty=format:%H:::%h:::%s:::%b;;;" })
+	local prev_tag = process.exec(GIT, { "describe", "--tags", "--abbrev=0", tag .. "~" })
+	prev_tag = string.gsub(prev_tag.stdout, "%s+", "")
+
+	local result = process.exec(GIT, { "log", prev_tag .. ".." .. tag, "--pretty=format:'%H:::%h:::%s:::;;;'" })
 
 	if result.ok then
-		local commits = string.split(result.stdout, ";;;\n")
+		if result.stdout == "" then
+			return {
+				ok = {},
+			}
+		end
+		--print(result.stdout)
+		local commits = string.split(result.stdout, ";;;'\n")
 
 		local parsed: { GitLogParsed } = {}
-
 		for _, v in commits do
+			v = string.sub(v, 2)
 			local split = string.split(v, ":::")
 			local hash = split[1]
 			local short_hash = split[2]
 			local subject = split[3]
-			local body = split[4]
-
-			-- trailing whitespace remove
-			if string.sub(body, -1) == "\n" then
-				body = string.sub(body, 1, -2)
-			end
 
 			table.insert(parsed, {
 				hash = hash,
 				short_hash = short_hash,
 				subject = subject,
-				body = body,
 			})
 		end
 

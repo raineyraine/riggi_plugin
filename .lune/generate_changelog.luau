@@ -29,6 +29,10 @@ for _, commit: git_log.GitLogParsed in logs.ok do
 	changelog_text ..= line .. "\n"
 end
 
+if #logs.ok == 0 then
+	changelog_text = "No commits"
+end
+
 stdio.write(changelog_text)
 
 local CHANGELOG_CURRENT = fs.readFile(CHANGELOG_PATH)
