@@ -1,7 +1,7 @@
 authors = ["raineyraine"]
 license = "MIT"
 name = "raineyraine/riggi_plugin"
-version = "0.1.1"
+version = "0.1.2"
 
 [dependencies.vide]
 repo = "centau/vide"
